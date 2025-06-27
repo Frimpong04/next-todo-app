@@ -1,0 +1,11 @@
+.detail_container {
+    width: 700px;
+    margin: 30px auto;
+}
+
+.detail_container h2 {
+    margin: 16px 0;
+    font-size: 30px;
+    text-align: center;
+    border-bottom: 1px solid #aaa;
+}

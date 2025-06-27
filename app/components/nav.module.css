@@ -1,0 +1,41 @@
+.main {
+    border-bottom: 3px solid #777;
+    color: #777;
+}
+
+.nav {
+    width: 960px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav h1 {
+    font-size: 20px;
+}
+
+.nav_items {
+    list-style-type: none;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+}
+
+.nav_items a {
+ margin-right: 50px;
+ font-weight: bold;
+ padding: 10px;
+ border-radius: 8px;
+ color: #aaa;
+}
+
+
+.nav_items a:hover {
+    color: rgb(155, 156, 156);
+}
+
+
+
+.nav_items a.active {
+    border-top: 1px solid #333;
+}

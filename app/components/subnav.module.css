@@ -1,0 +1,10 @@
+.nav {
+    margin-top: 16px;
+}
+
+.nav a {
+  border: 1px solid #333;
+  padding: 16px;
+  color: whitesmoke;
+  background-color: #333;
+}
