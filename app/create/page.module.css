@@ -12,6 +12,12 @@
     border: 1px solid #aaa;
     padding: 50px;
     border-radius: 8px;
+  
+}
+
+.form_container form h2 {
+    border-bottom: 4px solid #333;
+    padding: 10px;
 }
 
 .form_container form label {
