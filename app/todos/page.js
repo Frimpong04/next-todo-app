@@ -40,7 +40,11 @@ export default async function Todos() {
                         </div>
                         <div className={classes.btn_container}>
                             <Link href={`/todos/${todo.id}`}>View Details</Link>
-                            <DeleteButton id={todo.id}/>
+                            <div>
+                                <DeleteButton id={todo.id}/>
+                                <Link href={`todos/${todo.id}/update`}>Update todo</Link>
+                            </div>
+                            
                         </div>
                         
                     </div>

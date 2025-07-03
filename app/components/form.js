@@ -1,17 +1,41 @@
+"use client";
+
 import { useState } from "react";
 import { useRouter } from 'next/navigation';
 
+// styles
+import classes from "./form.module.css";
 
-export default function InputForm(handleData) {
+async function updateTodo(url, data) {
+    const res = await fetch(url, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    })
 
-   const [title, setTitle] = useState("");
-   const [desc, setDesc] = useState("");
-   const [date, setDate] = useState("");
-   const [priority, setPriority] = useState("");
+    if(!res.ok) {
+        throw new Error("Could not update todo")
+    }
+
+    return res.json();
+}
+
+export const metadata = {
+    titlte: "update todo",
+    description: "An update form to change or update todo items"
+}
+
+export default function UpdateForm({ todo }) {
+
+   const [title, setTitle] = useState(todo.title);
+   const [desc, setDesc] = useState(todo.description);
+   const [date, setDate] = useState(todo.date);
+   const [priority, setPriority] = useState(todo.priority);
 
    const router = useRouter()
   
-    
    async function handleSubmit(e) {
         e.preventDefault();
         const newTodo = {
@@ -22,7 +46,7 @@ export default function InputForm(handleData) {
         }
         console.log(newTodo);
 
-       handleData(newTodo);
+        updateTodo(`http://localhost:8800/todos/${todo.id}`, newTodo);
 
         setTitle("");
         setDesc("");
@@ -32,9 +56,11 @@ export default function InputForm(handleData) {
         router.push("/todos")
         
    }
+
     return (
-        <form onSubmit={handleSubmit}>
-                <h2>Create a new Todo Item</h2>
+        <main className={classes.form_container}>
+            <form onSubmit={handleSubmit}>
+                <h2>Update { todo.title }</h2>
                 <label>
                     <span>Title</span>
                     <input 
@@ -77,7 +103,9 @@ export default function InputForm(handleData) {
                         onChange={(e) => setDate(e.target.value)}
                     />
                 </label>
-                <button>Add Todo</button>
+                <button>update Todo</button>
            </form>
+        </main>
+        
     )
 }

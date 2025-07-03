@@ -1,19 +1,11 @@
 {
   "todos": [
     {
-      "id": "m3",
-      "title": "third todo",
-      "description": "third trial with next js",
-      "priority": "low",
-      "date": "06/07/2025",
-      "completed": "false"
-    },
-    {
-      "id": "160f",
-      "title": "Teast again",
-      "description": "asdrdftcg vbgfhgnkh nbjhuj mngjgjngjgnmjj nfhfhfyghbmh ngnghjg ngjgjgj",
+      "title": "Teast again 123456778989",
+      "description": "asdrdftcg vbgfhgnkh nbjhuj mngjgjngjgnmjj nfhfhfyghbmh ngnghjg ngjgjgjbnvg nfjfj gngj mjhkhkjj",
       "priority": "high",
-      "date": "2025-06-28"
+      "date": "2025-07-05",
+      "id": "160f"
     },
     {
       "id": "c69a",
@@ -49,6 +41,13 @@
       "description": "Build a platfomr that dental labs and dentist can use for lab works in which dentist can send their lab jobs and request to dental labs and also make payment on the pltaform. the platform will make a commision on the payment that the dentist makes to the labs and the labs will not be charged for using the platform",
       "priority": "high",
       "date": "2025-07-03"
+    },
+    {
+      "id": "afb8",
+      "title": "strategic plan for the clinic",
+      "description": "asddrf vbnghg bnhjh nmhkh mhkkkg vnhdghbf vnghg bjgjgnhkb nhdf vnjg gmgjgngngjg bmjgjh ",
+      "priority": "low",
+      "date": "2025-07-05"
     }
   ]
 }

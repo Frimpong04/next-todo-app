@@ -6,6 +6,7 @@ import { useState } from 'react';
 import classes from './page.module.css';
 import { useRouter } from 'next/navigation';
 
+
 async function createTodo (todo) {
     const res = await fetch("http://localhost:8800/todos", {
         method: "POST",

@@ -4,6 +4,13 @@ import Link from "next/link";
 import classes from "./page.module.css";
 
 
+export function generateMetaData({ params }) {
+    return {
+        title: params.title,
+        description: params.description
+    }
+}
+
 export default async function todoDetail({ params }) {
 
     const {id} =  params
